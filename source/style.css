@@ -1,0 +1,213 @@
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./fonts/opensans.woff2") format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 600;
+	src: url("./fonts/open-sans-semibold.woff2") format("woff2");
+	font-display: swap;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+    font-family: "Open Sans", "Arial", sans-serif;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+
+  .main-header__logo {
+      display: block;
+      text-align: center;
+  }
+
+  .main-container__wrapper {
+     margin: 0 auto;
+  }
+
+  .main-container__container {
+      margin: 0 auto;
+      display:flex;   
+      justify-content: space-between; 
+      width: 60%;
+  }
+
+  .layover-count_list {
+    list-style: none;
+    padding:0;
+    margin: 0;
+  }
+
+  .layover-count__title {
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: 600;
+  }
+
+  .layover-count {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+
+  .layover-count__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+
+  .layover-count__input + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .layover-count__input + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    left: 0;
+    top: 0;
+    border: 1px solid #9ABBCE;
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin-right: 0.9em;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .layover-count__input:checked + label::before {
+    background-image: url("./img/Shape.png");
+  }
+
+  .layover-count__control {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+  }
+
+  .search-results-filters{
+      display: flex;
+      margin-bottom: 20px;
+  }
+
+  .search-results-filters__button {
+      width: 168px;
+      height: 50px;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 600;
+      border: 1px solid #DFE5EC;
+      background-color:  #ffffff;
+  }
+
+  .search-results-filters__button--cheap{
+      border-radius: 5px 0 0 5px;
+  }
+
+  .search-results-filters__button--optimal {
+      border-radius: 0 5px 5px 0;
+  }
+
+  .search-results-filters__button--active {
+    background: #2196F3;
+    color: #ffffff;
+  }
+
+  .search-results__list {
+      list-style: none;
+      margin:0;
+      padding: 0;
+  }
+
+  .ticket-info__list {
+      list-style: none;
+      margin:0;
+      padding: 0;
+  }
+
+  .search-results__item {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+  }
+
+  .search-results__item-price {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 600;
+      color: #2196F3;
+      line-height: 24px;
+  }
+
+  .search-results__item-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  }
+
+  .ticket-info__item {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 10px;
+  }
+
+  .ticket-info__block {
+      display: flex;
+      flex-direction: column;
+  }
+
+
+  .ticket-info__description {
+    color: #A0B0B9;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .ticket-info__data {
+    font-size: 14px;
+    line-height: 21px;
+    color: #4A4A4A;
+  }
+
+  .search-results__button {
+    width: 502px;
+    background: #2196F3;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    text-transform: uppercase;
+  }
