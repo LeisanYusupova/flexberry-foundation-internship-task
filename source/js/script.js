@@ -29,7 +29,6 @@ function getArray(data) {
 }
 
 getData((tickets) => {
-    console.log(tickets);
     showTickets(tickets);
   });
 
@@ -110,8 +109,7 @@ function getTicketsByTheLayovers(data, count1, count2, count3) {
 
 function getTicketsbyPrice(data, count1, count2, count3) {
     const tickets = sortTicketsByPrice(data);
-    const allTickets = getTicketsByTheLayovers(tickets, count1, count2, count3);
-    console.log(allTickets);    
+    const allTickets = getTicketsByTheLayovers(tickets, count1, count2, count3);   
     const renderedList = renderTicketList(allTickets);
     return renderedList;
 }
@@ -139,7 +137,6 @@ function showTickets(items) {
 
     function showAllTickets() {
         const selectedCheckBoxes = document.querySelectorAll('.layover-count__input:checked');
-        console.log(selectedCheckBoxes);
         const checkedValues = Array.from(selectedCheckBoxes).map(cb => cb.id);
         if (checkedValues.length ===0 ) {
             ticketList.innerHTML='';
